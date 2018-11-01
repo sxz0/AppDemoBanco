@@ -26,7 +26,7 @@ public class Main2Activity extends AppCompatActivity {
     Button b1;
     Button b2;
     private TextView error;
-    double res=Utils.leerValidacion();
+    double res=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +34,7 @@ public class Main2Activity extends AppCompatActivity {
         b1=(Button)findViewById(R.id.button2);
         b2=(Button)findViewById(R.id.button3);
         error=(TextView) findViewById(R.id.textView);
-        final double res=Utils.leerValidacion();
+        res=Utils.leerValidacion();
         checkForPermission(this);
         if(res<0.35){
             error.setVisibility(View.VISIBLE);
