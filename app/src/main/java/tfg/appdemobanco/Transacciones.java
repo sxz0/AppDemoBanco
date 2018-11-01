@@ -32,16 +32,13 @@ public class Transacciones extends AppCompatActivity {
             public void onClick(View v) {
                 String n = String.valueOf(importe.getText());
                 double importe=0;
-                if(n!=null)
+                if(n!=null) {
                     importe = Double.parseDouble(n);
-                else
+                    Intent exito=new Intent(getApplicationContext(),Exito.class);
+                    startActivity(exito);
+                }else
                     Toast.makeText(getApplicationContext(),"The amount can not be void.",Toast.LENGTH_LONG).show();
                     //Comprobacion de credenciales si hubiera
-                Intent exito=new Intent(getApplicationContext(),Exito.class);
-                startActivity(exito);
-                /*if ((res >= 0.80 && importe > 20) || importe <= 20) {
-
-                }*/
             }
         });
     }
